@@ -1,12 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Product | Griffin Grinding</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<header class="header" role="banner">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="Home">
+      <span class="mark">GG</span>
+      <b>Griffin Grinding</b>
+    </a>
+    <nav aria-label="Primary" role="navigation">
+      <button class="burger" aria-label="Menu">☰</button>
+      <div class="menu">
+        <a href="index.html#products">Products</a>
+        <a href="why-about.html#why">Why Choose Us</a>
+        <a href="why-about.html#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="product-detail-root">
+  <section class="product-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a> › <a href="index.html#products">Products</a> › <span data-title>Loading…</span></nav>
+      <h1 class="underline" data-title>Product Title</h1>
+    </div>
+  </section>
 
-<figure id="chart-figure" style="margin:0">
-  <img id="spec-chart" src="" alt="Product specification chart"
-       style="max-width:100%;height:auto;display:none;border-radius:12px;background:#f8fafc"/>
-  <figcaption style="color:#64748b;font-size:.9rem;margin-top:.25rem">
-    If the PNG chart is not available, the table below is shown.
-  </figcaption>
-</figure>
+  <div class="container product-wrap">
+    <article>
+      <h2>Description</h2>
+      <p data-desc>Loading…</p>
+    </article>
+    <aside>
+      <img data-image src="assets/img/placeholder.svg" alt="Product image"/>
+    </aside>
+  </div>
 
-<table class="table" id="spec-table">
-  <tbody></tbody>
-</table>
+  <div class="container">
+    <div class="spec-card">
+      <div class="hd">Chart</div>
+      <div class="bd">
+        <img id="spec-chart" src="" alt="Product specification chart" style="max-width:100%;height:auto;display:none;border-radius:12px;background:#f8fafc"/>
+        <div style="overflow:auto;margin-top:.6rem">
+          <table class="table" id="spec-table"><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-strip">
+      <h3>Contact Us</h3>
+      <p>Austin Bondlam</p>
+      <form action="mailto:corporate@griffingrinding.com" method="post" enctype="text/plain">
+        <div class="row">
+          <input class="input" name="email" placeholder="Email">
+          <input class="input" name="mobile" placeholder="Mobile">
+        </div>
+        <textarea class="input" name="message" rows="4" placeholder="Message" style="margin-top:12px"></textarea>
+        <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Send enquiry</button></div>
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="footer" id="contact" role="contentinfo">
+  <div class="container">
+    <section>
+      <h3>Contact Us</h3>
+      <p>corporate@griffingrinding.com<br>5 /11 Anvril Way, Welshpool WA 6106</p>
+      <p>
+        <span class="badge">ISO 9001</span>
+        <span class="badge">Custom Alloys</span>
+        <span class="badge">Global Logistics</span>
+      </p>
+      <small>© <span id="year"></span> Griffin Grinding. All rights reserved.</small>
+    </section>
+    <section>
+      <h3>Quick Message</h3>
+      <form action="mailto:corporate@griffingrinding.com" method="post" enctype="text/plain">
+        <div class="contact-strip row" style="border:none;padding:0">
+          <input class="input" name="name" placeholder="Name">
+          <input class="input" name="email" placeholder="Email">
+        </div>
+        <div class="contact-strip row" style="border:none;padding:0;margin-top:12px">
+          <input class="input" name="mobile" placeholder="Mobile">
+          <input class="input" name="subject" placeholder="Subject (optional)">
+        </div>
+        <textarea class="input" name="message" rows="4" placeholder="Message" style="margin-top:12px"></textarea>
+        <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Send</button></div>
+      </form>
+    </section>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
