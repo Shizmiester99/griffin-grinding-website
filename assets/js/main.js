@@ -76,3 +76,38 @@ if(burger&&menu){burger.addEventListener('click',()=>menu.classList.toggle('open
   const tbody=table.querySelector('tbody'); tbody.innerHTML='';
   for(const [k,v] of (data.specs||[])){ const tr=document.createElement('tr'); tr.innerHTML=`<th scope="row">${k}</th><td>${v}</td>`; tbody.appendChild(tr); }
 })();
+
+
+// --- Mailto helper for forms (no backend needed) ---
+(function() {
+  const forms = document.querySelectorAll('form.mailto-form');
+  forms.forEach((form) => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const fd = new FormData(form);
+
+      // Collect common fields if present
+      const first = fd.get('first_name') || fd.get('name') || '';
+      const last  = fd.get('last_name')  || '';
+      const email = fd.get('email')      || '';
+      const mobile= fd.get('mobile')     || '';
+      const subj  = fd.get('subject')    || 'Website enquiry';
+      const msg   = fd.get('message')    || '';
+
+      const to = 'corporate@griffingrinding.com';
+      const subject = encodeURIComponent(subj);
+      const bodyLines = [
+        (first || last) ? `Name: ${first} ${last}`.trim() : '',
+        email ? `Email: ${email}` : '',
+        mobile ? `Mobile: ${mobile}` : '',
+        '',
+        msg || 'Hello, I would like to enquire about your products.',
+      ].filter(Boolean);
+
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      // Open the user's email client
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  });
+})();
+
