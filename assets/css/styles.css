@@ -18,6 +18,22 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif
 .burger{display:none;border:0;background:transparent;font-size:1.6rem}
 @media(max-width:860px){.menu{display:none;position:absolute;left:0;right:0;top:60px;background:#fff;border-bottom:1px solid #eee;padding:1rem 1.2rem;flex-direction:column}.menu.open{display:flex}.burger{display:inline-grid}}
 
+
+/* Show brand text only on home */
+body:not(.home) .logo b { display: none; }
+
+/* Orange header separator line on non-home pages */
+body:not(.home) .header { border-bottom-color: var(--accent); }
+
+
+/* Orange line for sections on non-home pages */
+body:not(.home) .section { border-top: 2px solid var(--accent); padding-top: 2rem; }
+
+/* Ensure About us is not forced uppercase */
+#about h2 { text-transform: none; }    /* override any inherited uppercase */
+
+
+
 /* Hero */
 .hero{background:linear-gradient(180deg,#fff,#fff7f0 40%,#fff);border-bottom:1px solid #f1f5f9}
 .hero-inner{padding:3.2rem 0}
@@ -27,6 +43,18 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif
 .btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid #e2e8f0;padding:.7rem 1rem;border-radius:999px;background:#fff;color:#111;text-decoration:none}
 .btn-primary{background:var(--accent);border-color:transparent;font-weight:800;color:#111;box-shadow:var(--shadow)}
 
+
+.hero-with-banner{
+  background-image:
+    linear-gradient(rgba(11,16,32,.45), rgba(11,16,32,.45)),
+    url("assets/img/Homepage Banner Image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-with-banner .hero-inner { color:#fff; }
+
+
 .section{padding:2.4rem 0}
 .section h2{margin:0 0 1.1rem;font-size:1.9rem;text-transform:uppercase;letter-spacing:.9px}
 
@@ -34,11 +62,11 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif
 .reveal-grid{display:grid;gap:1rem;grid-template-columns:1fr}
 @media(min-width:860px){.reveal-grid{grid-template-columns:1fr 1fr}}
 .reveal{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.03)}
-.reveal > button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;background:#fff;border:0;cursor:pointer;font-weight:900;text-transform:uppercase;letter-spacing:.8px}
+.reveal > button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;background: var(--accent); color:#111;border:0;cursor:pointer;font-weight:900;text-transform:uppercase;letter-spacing:.8px;  transition: filter .15s ease;}
 .reveal > button:hover{background:#fff7f0}
 .reveal .chev{transition:transform .2s ease}
 .reveal.open .chev{transform:rotate(90deg)}
-.reveal .panel{display:grid;grid-template-columns:1fr;gap:1rem;border-top:1px solid var(--border);padding:1rem 1.1rem;max-height:0;opacity:0;transform:translateY(-4px);transition:max-height .25s ease, opacity .2s ease, transform .2s ease}
+.reveal .panel{background:#fff;display:grid;grid-template-columns:1fr;gap:1rem;border-top:1px solid var(--border);padding:1rem 1.1rem;max-height:0;opacity:0;transform:translateY(-4px);transition:max-height .25s ease, opacity .2s ease, transform .2s ease}
 .reveal.open .panel{max-height:1000px;opacity:1;transform:translateY(0)}
 .panel .copy{color:var(--muted)}
 .panel .cta{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
@@ -46,7 +74,7 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif
 .panel img.thumb{width:100%;height:200px;object-fit:cover;border-radius:12px;background:#f1f5f9}
 
 /* Product detail */
-.product-hero{padding:1.4rem 0;border-bottom:1px solid var(--border)}
+.product-hero{padding:1.4rem 0;border-bottom:1px solid var(--accent);}
 .breadcrumb{font-size:.95rem;color:#64748b}
 .breadcrumb a{color:inherit}
 .underline{border-bottom:4px solid var(--accent);display:inline-block;padding-bottom:.25rem;margin:0}
@@ -65,8 +93,12 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,'Noto Sans',sans-serif
 @media(max-width:620px){.product-wrap{grid-template-columns:1fr}.contact-strip .row{grid-template-columns:1fr}}
 .input{width:100%;padding:.7rem .85rem;border:1px solid #d1d5db;border-radius:10px}
 
-.footer{background:#0b1020;color:#e2e8f0;margin-top:3rem}
+.footer{background:var(--accent);color:#111;margin-top:3rem}
 .footer .container{display:grid;gap:2rem;grid-template-columns:1.1fr .9fr;padding:2rem 1rem}
-.footer h3{color:#fff;margin:0 0 .6rem;text-transform:uppercase;letter-spacing:.8px}
+.footer h3{color:#111;margin:0 0 .6rem;text-transform:uppercase;letter-spacing:.8px}
 .footer small{color:#94a3b8}
+.footer .btn-primary{ background:#111; color:#fff; }   /* make primary action pop */
+.input{
+  background:#fff; color:#111; border:1px solid #d1d5db; /* readable on orange */
+
 .badge{display:inline-block;background:#fff0e6;color:#a14500;border:1px solid #ffe4cc;padding:.25rem .55rem;border-radius:999px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
