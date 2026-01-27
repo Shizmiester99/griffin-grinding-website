@@ -1,6 +1,6 @@
 /* Griffin Grinding – Accordion/Reveal products + product layout */
 :root{
-  --accent:#ff7a00;--ink:#0b1020;--muted:#475569;--border:#e5e7eb;--bg:#fff;--radius:14px;--shadow:0 10px 24px rgba(0,0,0,.08)
+  --accent:#FF964F;--ink:#0b1020;--muted:#475569;--border:#e5e7eb;--bg:#fff;--radius:14px;--shadow:0 10px 24px rgba(0,0,0,.08)
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
