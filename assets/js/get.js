@@ -1,24 +1,64 @@
 const products = [
   {
-    name: "Grinding Balls",
-    key: "grinding-balls",
-    image: "assets/img/grinding-balls.jpg"
+    name: "Bucket Teeth",
+    key: "bucket-teeth",
+    image: "assets/img/bucket-teeth.png"
   },
   {
-    name: "Chrome Cast Balls",
-    key: "chrome-cast-balls",
-    image: "assets/img/chrome-balls.jpg"
+    name: "Root Rakes",
+    key: "root-rakes",
+    image: "assets/img/root-rakes.png"
   },
   {
-    name: "Grinding Cylpebs",
-    key: "cast-grinding-cylpebs",
-    image: "assets/img/cylpebs.jpg"
+    name: "Ripper",
+    key: "ripper",
+    image: "assets/img/rippers.png"
   },
   {
-    name: "Grinding Rods",
-    key: "grinding-rods",
-    image: "assets/img/rods.jpg"
-  }
+    name: "Pallet Forks",
+    key: "pallet-forks",
+    image: "assets/img/pallet-forks.png"
+  },
+   {
+    name: "4 in 1 Buckets",
+    key: "4-in-1-buckets",
+    image: "assets/img/4-in-1-buckets.png"
+  },
+  {
+    name: "Augerss",
+    key: "Augers",
+    image: "assets/img/Augers.png"
+  },
+  {
+    name: "Hydraulic Breakers",
+    key: "hydraulic-breakers",
+    image: "assets/img/hydralic-breakers.png"
+  },
+  {
+    name: "Standard Digging Buckets",
+    key: "standard-digging-buckets",
+    image: "assets/img/standard-digging-buckets.png"
+  },
+   {
+    name: "Heel Shrouds",
+    key: "heel-shrouds",
+    image: "assets/img/heel-shrouds.png"
+  },
+  {
+    name: "Lip and Cheek Shrouds",
+    key: "lip-and-cheek-shrouds",
+    image: "assets/img/lip-and-cheek-shrouds.png"
+  },
+  {
+    name: "Cutting Edges",
+    key: "cutting-edges",
+    image: "assets/img/cutting-edges.png"
+  },
+  {
+    name: "Pins and Retainers",
+    key: "pins-and-retainers",
+    image: "assets/img/pins-and-retainers.png"
+  },
 ];
 
 const grid = document.getElementById("getGrid");
