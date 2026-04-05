@@ -103,7 +103,7 @@ body:not(.home) .section { border-top: 2px solid var(--accent); padding-top: 2re
 
 .badge{display:inline-block;background:#fff0e6;color:#a14500;border:1px solid #ffe4cc;padding:.25rem .55rem;border-radius:999px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
 
-  .get-grid {
+ .get-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
@@ -111,35 +111,65 @@ body:not(.home) .section { border-top: 2px solid var(--accent); padding-top: 2re
 }
 
 .get-card {
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
-  display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+
+  transition: all 0.25s ease;
 }
 
 .get-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
 .get-image {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: #f2f2f2;
-  border-radius: 6px;
+  min-height: 200px;
+
+  background: linear-gradient(145deg, #f7f7f7, #ececec);
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .get-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.get-card:hover .get-image img {
+  transform: scale(1.08);
 }
 
 .get-name {
   text-align: center;
-  margin-top: 12px;
+  padding: 12px;
   font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.get-card:hover .get-name {
+  color: #0077ff;
 }
 
 /* Responsive */
