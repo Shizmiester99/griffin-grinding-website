@@ -32,7 +32,7 @@ const products = [
   {
     name: "Hydraulic Breakers",
     key: "hydraulic-breakers",
-    image: "assets/img/hydralic-breakers.png"
+    image: "assets/img/hydraulic-breakers.png"
   },
   {
     name: "Standard Digging Buckets",
