@@ -25,7 +25,7 @@ const products = [
     image: "assets/img/4-in-1-buckets.png"
   },
   {
-    name: "Augerss",
+    name: "Augers",
     key: "Augers",
     image: "assets/img/Augers.png"
   },
